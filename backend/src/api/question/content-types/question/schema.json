@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questions",
+  "info": {
+    "singularName": "question",
+    "pluralName": "questions",
+    "displayName": "Question",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "statement": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "a": {
+      "type": "text",
+      "required": true,
+      "minLength": 1
+    },
+    "b": {
+      "type": "text",
+      "required": true,
+      "minLength": 1
+    },
+    "c": {
+      "type": "text",
+      "required": true,
+      "minLength": 1
+    },
+    "d": {
+      "type": "text",
+      "required": true,
+      "minLength": 1
+    },
+    "key": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "tests": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::test.test",
+      "mappedBy": "questions"
+    }
+  }
+}
